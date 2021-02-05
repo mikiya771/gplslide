@@ -1,0 +1,54 @@
+# Go研修
+振り返りと今後とおまけ
+5 Feb 2021
+Tags: golang
+
+水木佑哉
+
+## Go研修の前後で
+
+Go研修の前の状態
+
+- どの言語においてもきっちりと仕様を抑えたことがなかった
+  - なんとなく書いていた
+
+
+Go研修の後の状態
+
+- 言語仕様について少し理解が深まった
+- ライブラリに頼っていた部分の中身に少し目がいった
+
+
+## 研修を通して刺さったこと
+
+- 言語仕様を丁寧に抑えるのは面白い
+  - reflectionやunsafeなどライブラリ作成に役立つ部分など
+- parserなどの実装は面白い
+  - のっぺりとした文章を分解して意味のある単位に理解していくなど
+
+## 今後やりたきこと
+- 言語仕様やパーサーなどの深堀やらコード生成
+  - lspや補助ツールの自作
+  - GO言語でつくるインタプリタ
+
+.image https://www.oreilly.co.jp/books/images/picture_large978-4-87311-822-2.jpeg 400 280
+
+## おまけ(Code Generation)
+.code metaprogramming/meta.go /^func main/,/^}/
+
+## おまけ2
+- TODO: reflectionをきちんと使ってライブラリっぽくする
+
+.code metaprogramming/meta.go /^func declare/,/^}/
+
+.code metaprogramming/meta.go /^func declareI/,/^}/
+
+- template meta programmingの物真似っぽいことがしたかった
+
+.link http://takesako.hatenablog.com/entry/2019/12/04/231647 コンパイル時計算完全に理解した
+
+## おまけ3
+
+.code metaprogramming/main/main.go /^func main/,/^}/
+.image ./primenumbers.png 450 800
+
